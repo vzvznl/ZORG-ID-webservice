@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="6.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Certificate" Version="6.0.6" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+    <PackageReference Include="Serilog.Exceptions" Version="8.2.0" />
+    <PackageReference Include="Serilog.Expressions" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+    <PackageReference Include="System.Buffers" Version="4.5.1" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="7.0.3" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="7.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="7.0.0" />
+    <PackageReference Include="System.Text.Json" Version="7.0.3" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Sdk\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Nl.Aet.Cid.Client.Sdk">
+      <HintPath>Sdk\Lib\Nl.Aet.Cid.Client.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Nl.Aet.Cid.Client.Sdk.Core">
+      <HintPath>Sdk\Lib\Nl.Aet.Cid.Client.Sdk.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Nl.Aet.Cid.Client.Sdk.Web">
+      <HintPath>Sdk\Lib\Nl.Aet.Cid.Client.Sdk.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Nl.Aet.Cid.Sdk.SoftCertificate.Gateway">
+      <HintPath>Sdk\Lib\Nl.Aet.Cid.Sdk.SoftCertificate.Gateway.dll</HintPath>
+    </Reference>
+    <Reference Include="Nl.Aet.Cid.Sdk.Web.Gateway.Rest">
+      <HintPath>Sdk\Lib\Nl.Aet.Cid.Sdk.Web.Gateway.Rest.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ba-test-a.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
